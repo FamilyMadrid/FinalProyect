@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100..800&family=Rationale&family=Share+Tech&display=swap");
+
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Share Tech", serif;
+  /* font-family: "Rationale", serif; */
+  /* font-family: "Anek Latin", serif; */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+header h1 {
+  font-family: "Anek Latin", serif;
+  margin-left: 30px;
+}
+
+.cart-icon {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.cart-svg {
+  width: 70px;
+  height: 45px;
+  fill: white;
+  margin-right: 3rem;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 3rem;
+}
+
+.camisas_hombres {
+  text-align: center;
+  font-size: 25px;
+  padding: 1px;
+  color: rgb(31, 30, 30);
+  background: radial-gradient(circle, #82f475, #c6e7c2);
+}
+
+.products {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row;
+  flex-wrap: wrap; /* Permite que los productos se acomoden en varias líneas si es necesario */
+  gap: 20px; /* Espacio entre los productos */
+}
+
+.product {
+  display: inline-block;
+  margin: 20px 43px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  max-width: 280px;
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+.product h2 {
+  text-align: center;
+}
+
+.cart {
+  position: fixed;
+  top: 0;
+  right: -440px; /* Inicia fuera de la pantalla */
+  width: 300px; /* Tamaño del carrito */
+  height: 45%;
+  background-color: rgb(230, 242, 250);
+  border-left: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+  /* Sombra para resaltar */
+  border-radius: 10px 0 0 10px;
+  /* Bordes redondeados a la izquierda */
+  transition: right 0.7s ease;
+  /* Transición suave */
+  overflow-y: auto;
+  /* Permitir desplazamiento en caso de contenido extenso */
+}
+
+.cart.open {
+  right: 0;
+  /* Alineado perfectamente con el borde derecho */
+}
+
+.cart h2 {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.cart-items p {
+  margin-left: 40px;
+  margin-bottom: 50px;
+}
+
+.cart-items div {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+#cart-total {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #5497df;
+}
+
+button:active {
+  background-color: #4191e1;
+}
+
+.close-cart {
+  display: block;
+  margin: 0px 0px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+  font-weight: 900;
+  text-align: center; /* Centrado horizontal */
+}
+
+.close-cart:hover {
+  color: #f8f7f7; /* Color al pasar el cursor */
+  font-weight: 900;
+}

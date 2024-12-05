@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Carrito de Compras</title>
+  </head>
+  <body>
+    <header>
+      <h1>Shopee-Lore</h1>
+      <div class="cart-icon" onclick="toggleCart()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="cart-svg"
+        >
+          <path
+            d="M3 3h2l1.5 10.8a3 3 0 0 0 3 2.7h7.2a3 3 0 0 0 3-2.7L21 6H6"
+          />
+          <circle cx="9" cy="20" r="2" />
+          <circle cx="18" cy="20" r="2" />
+        </svg>
+        <span id="cart-count" class="cart-count">0</span>
+      </div>
+    </header>
+
+    <main>
+      <div class="camisas_hombres">
+        <h2>Camisas Hombres</h2>
+      </div>
+      <div class="products">
+        <div class="product">
+          <h2>Camisa azul</h2>
+          <img src="./image/camiseta_2.jpg" alt="Camisa Azul" />
+          <p>Precio: $10.00</p>
+          <button onclick="addToCart('Producto 1', 10)">
+            Agregar al Carrito
+          </button>
+        </div>
+        <div class="product">
+          <h2>Camisa Estampada</h2>
+          <img src="./image/camiseta.jpg" alt="Camisa Estampada" />
+          <p>Precio: $20.00</p>
+          <button onclick="addToCart('Producto 2', 20)">
+            Agregar al Carrito
+          </button>
+        </div>
+        <div class="product">
+          <h2>Camisa Estampada</h2>
+          <img src="./image/camiseta_3.jpg" alt="Camisa Estampada" />
+          <p>Precio: $20.00</p>
+          <button onclick="addToCart('Producto 2', 20)">
+            Agregar al Carrito
+          </button>
+        </div>
+        <div class="product">
+          <h2>Camisa Estampada</h2>
+          <img src="./image/camiseta_4.jpg" alt="Camisa Estampada" />
+          <p>Precio: $20.00</p>
+          <button onclick="addToCart('Producto 2', 20)">
+            Agregar al Carrito
+          </button>
+        </div>
+        <div class="product">
+          <h2>Camisa Estampada</h2>
+          <img src="./image/camiseta_5 (1).webp" alt="Camisa Estampada" />
+          <p>Precio: $20.00</p>
+          <button onclick="addToCart('Producto 2', 20)">
+            Agregar al Carrito
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <div id="cart" class="cart">
+      <button class="close-cart" onclick="closeCart()">&rarr;</button>
+      <h2>Tu Carrito</h2>
+      <div id="cart-items">
+        <p>El carrito está vacío.</p>
+      </div>
+      <div id="cart-total">
+        <strong>Total: $0.00</strong>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
